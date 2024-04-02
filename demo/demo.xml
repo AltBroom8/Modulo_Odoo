@@ -1,0 +1,167 @@
+<odoo>
+    <data>
+<!--
+          <record id="object0" model="d:\users\solos\desktop\modulos\com_int.d:\users\solos\desktop\modulos\com_int">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="d:\users\solos\desktop\modulos\com_int.d:\users\solos\desktop\modulos\com_int">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="d:\users\solos\desktop\modulos\com_int.d:\users\solos\desktop\modulos\com_int">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="d:\users\solos\desktop\modulos\com_int.d:\users\solos\desktop\modulos\com_int">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="d:\users\solos\desktop\modulos\com_int.d:\users\solos\desktop\modulos\com_int">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+
+      <record model="com_int.product" id="product_ikea_silla">
+        <field name="name">Silla Ikea</field>
+        <field name="idproduct">1</field>
+        <field name="description">Silla cómoda y moderna para cualquier espacio.</field>
+        <field name="productName">Silla</field>
+        <field name="cost">25.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_ikea_mesa">
+        <field name="name">Mesa Ikea</field>
+        <field name="idproduct">2</field>
+        <field name="description">Mesa funcional y elegante, perfecta para comidas en familia.</field>
+        <field name="productName">Mesa</field>
+        <field name="cost">89.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_ikea_estanteria">
+        <field name="name">Estantería Ikea</field>
+        <field name="idproduct">3</field>
+        <field name="description">Estantería versátil para organizar tus libros y decoraciones.</field>
+        <field name="productName">Estantería</field>
+        <field name="cost">45.50</field>
+      </record>
+
+      <record model="com_int.product" id="product_ikea_cama">
+        <field name="name">Cama Ikea</field>
+        <field name="idproduct">4</field>
+        <field name="description">Cama cómoda y resistente para un buen descanso nocturno.</field>
+        <field name="productName">Cama</field>
+        <field name="cost">199.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_ikea_lampara">
+        <field name="name">Lámpara Ikea</field>
+        <field name="idproduct">5</field>
+        <field name="description">Lámpara moderna para iluminar y decorar cualquier habitación.</field>
+        <field name="productName">Lámpara</field>
+        <field name="cost">29.99</field>
+      </record>
+      <record model="com_int.product" id="product_gpu">
+        <field name="name">Tarjeta Gráfica Gaming XYZ</field>
+        <field name="idproduct">11</field>
+        <field name="description">Potente tarjeta gráfica diseñada para juegos de última generación.</field>
+        <field name="productName">Tarjeta Gráfica</field>
+        <field name="cost">349.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_cpu">
+        <field name="name">Procesador Intel Core i7</field>
+        <field name="idproduct">12</field>
+        <field name="description">Procesador de alto rendimiento para tareas exigentes y juegos.</field>
+        <field name="productName">Procesador</field>
+        <field name="cost">299.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_ram">
+        <field name="name">Tarjeta RAM Corsair DDR4 16GB</field>
+        <field name="idproduct">13</field>
+        <field name="description">Módulo de memoria RAM rápido y eficiente para mejorar el rendimiento de tu PC.</field>
+        <field name="productName">Tarjeta RAM</field>
+        <field name="cost">79.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_torre">
+        <field name="name">Torre de PC NZXT H510</field>
+        <field name="idproduct">14</field>
+        <field name="description">Torre de PC elegante y funcional con excelente gestión de cables.</field>
+        <field name="productName">Torre de PC</field>
+        <field name="cost">129.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_altavoces">
+        <field name="name">Altavoces Bluetooth Logitech Z623</field>
+        <field name="idproduct">15</field>
+        <field name="description">Altavoces de alta calidad con conexión Bluetooth para disfrutar de un sonido envolvente.</field>
+        <field name="productName">Altavoces Bluetooth</field>
+        <field name="cost">89.99</field>
+      </record>
+
+      <record model="com_int.product" id="product_teclado">
+        <field name="name">Teclado Musical Yamaha PSR-E363</field>
+        <field name="idproduct">16</field>
+        <field name="description">Teclado musical con funciones avanzadas y gran variedad de tonos y ritmos.</field>
+        <field name="productName">Teclado Musical</field>
+        <field name="cost">249.99</field>
+      </record>
+
+      <record model="com_int.shipping" id="shipping_order_1">
+        <field name="name">Pedido 1</field>
+        <field name="idShipping">101</field>
+        <field name="shippingPoint">Almacén Central</field>
+        <field name="pickUpPoint">Domicilio del Cliente 1</field>
+        <field name="shippingDate">2024-03-10</field>
+        <field name="cost">15.00</field>
+        <field name="product_ids" eval="[(6, 0, [ref('product_ikea_silla'), ref('product_gpu'), ref('product_ram')])]"/>
+      </record>
+
+      <record model="com_int.shipping" id="shipping_order_2">
+        <field name="name">Pedido 2</field>
+        <field name="idShipping">102</field>
+        <field name="shippingPoint">Sucursal Norte</field>
+        <field name="pickUpPoint">Domicilio del Cliente 2</field>
+        <field name="shippingDate">2024-03-12</field>
+        <field name="cost">25.00</field>
+        <field name="product_ids" eval="[(6, 0, [ref('product_ikea_mesa'), ref('product_cpu'), ref('product_torre')])]"/>
+      </record>
+
+      <record model="com_int.shipping" id="shipping_order_3">
+        <field name="name">Pedido 3</field>
+        <field name="idShipping">103</field>
+        <field name="shippingPoint">Sucursal Sur</field>
+        <field name="pickUpPoint">Domicilio del Cliente 3</field>
+        <field name="shippingDate">2024-03-15</field>
+        <field name="cost">30.00</field>
+        <field name="product_ids" eval="[(6, 0, [ref('product_ikea_estanteria'), ref('product_ram'), ref('product_gpu')])]"/>
+      </record>
+
+      <record model="com_int.shipping" id="shipping_order_4">
+        <field name="name">Pedido 4</field>
+        <field name="idShipping">104</field>
+        <field name="shippingPoint">Almacén Central</field>
+        <field name="pickUpPoint">Domicilio del Cliente 4</field>
+        <field name="shippingDate">2024-03-18</field>
+        <field name="cost">18.00</field>
+        <field name="product_ids" eval="[(6, 0, [ref('product_ikea_cama'), ref('product_gpu'), ref('product_teclado')])]"/>
+      </record>
+
+      <record model="com_int.shipping" id="shipping_order_5">
+        <field name="name">Pedido 5</field>
+        <field name="idShipping">105</field>
+        <field name="shippingPoint">Sucursal Oeste</field>
+        <field name="pickUpPoint">Domicilio del Cliente 5</field>
+        <field name="shippingDate">2024-03-20</field>
+        <field name="cost">22.00</field>
+        <field name="product_ids" eval="[(6, 0, [ref('product_ikea_lampara'), ref('product_cpu'), ref('product_torre')])]"/>
+      </record>
+    </data>
+</odoo>
